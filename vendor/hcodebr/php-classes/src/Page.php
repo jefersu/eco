@@ -25,13 +25,13 @@ class Page {
 			"debug"         => false 
 	);
 
-	Tpl::configure( $config );
+		Tpl::configure( $config );
 	
-	$this->tpl = new Tpl;
+		$this->tpl = new Tpl;
 
-	$this->setData($this->options["data"]);
+		$this->setData($this->options["data"]);
 
-	if ($this->options ["header"] === true) $this->tpl->draw("header");
+		if ($this->options ["header"] === true) $this->tpl->draw("header");
 	
 	}	
 
@@ -39,8 +39,8 @@ class Page {
 
 	{
 
-	foreach ($data as $key => $value) {
-		$this->tpl->assign($key, $value);
+		foreach ($data as $key => $value) {
+			$this->tpl->assign($key, $value);
 		}
 	}
 	public function setTpl($name, $data = array(), $returnHTML = false)
